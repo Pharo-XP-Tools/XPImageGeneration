@@ -16,8 +16,8 @@ BaselineOfXPImageGeneration >> baseline: spec [
 { #category : #baselines }
 BaselineOfXPImageGeneration >> postload: loader package: packageSpec [
 
-	UIManager default
+	"UIManager default
 		informUser: 'Generating experient image. Please wait...'
 		during: [ 
-		(self class environment at: #XPImageGeneration) generateImage ]
+		(self class environment at: #XPImageGeneration) generateImage ]"
 ]
