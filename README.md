@@ -75,7 +75,7 @@ Copy paste the following lines in the Playground, then select them, right-click 
 ```Smalltalk
 Metacello new
 	baseline: 'XPImageGeneration';
-	repository: 'github://Pharo-XP-Tools/XPImageGeneration:exp-ocd';
+	repository: 'github://Pharo-XP-Tools/XPImageGeneration:template';
 	load.
 ```
 
