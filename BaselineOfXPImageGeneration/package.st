@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfXPImageGeneration }
+Package { #name : 'BaselineOfXPImageGeneration' }

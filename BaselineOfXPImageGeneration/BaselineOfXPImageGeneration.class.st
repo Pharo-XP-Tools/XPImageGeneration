@@ -1,10 +1,11 @@
 Class {
-	#name : #BaselineOfXPImageGeneration,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfXPImageGeneration
+	#name : 'BaselineOfXPImageGeneration',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfXPImageGeneration',
+	#package : 'BaselineOfXPImageGeneration'
 }
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfXPImageGeneration >> baseline: spec [
 
 	<baseline>
@@ -13,11 +14,11 @@ BaselineOfXPImageGeneration >> baseline: spec [
 		spec package: 'XPImageGeneration' ]
 ]
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfXPImageGeneration >> postload: loader package: packageSpec [
 
-	"UIManager default
+	UIManager default
 		informUser: 'Generating experient image. Please wait...'
 		during: [ 
-		(self class environment at: #XPImageGeneration) generateImage ]"
+		(self class environment at: #XPImageGeneration) generateImage ]
 ]
