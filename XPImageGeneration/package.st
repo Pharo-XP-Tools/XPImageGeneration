@@ -1,1 +1,1 @@
-Package { #name : #XPImageGeneration }
+Package { #name : 'XPImageGeneration' }

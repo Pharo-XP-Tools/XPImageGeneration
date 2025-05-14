@@ -1,13 +1,15 @@
 Class {
-	#name : #XPMessageBox,
-	#superclass : #MessageDialogWindow,
+	#name : 'XPMessageBox',
+	#superclass : 'MessageDialogWindow',
 	#instVars : [
 		'entryText'
 	],
-	#category : #'XPImageGeneration-UI'
+	#category : 'XPImageGeneration-UI',
+	#package : 'XPImageGeneration',
+	#tag : 'UI'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 XPMessageBox class >> showDialog: text withTitle: title [
 
 	| dialog width linesCount |
@@ -27,14 +29,14 @@ XPMessageBox class >> showDialog: text withTitle: title [
 	dialog position: 25 @ 25
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 XPMessageBox >> entryText [
 	"Answer the value of entryText"
 
 	^ entryText
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 XPMessageBox >> entryText: anObject [
 	"Set the value of entryText"
 
@@ -42,14 +44,14 @@ XPMessageBox >> entryText: anObject [
 	self changed: #entryText
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 XPMessageBox >> isResizeable [
 	"Answer whether we are not we can be resized."
 
 	^true
 ]
 
-{ #category : #building }
+{ #category : 'building' }
 XPMessageBox >> newContentMorph [
 	"Answer a new content morph."
 
@@ -61,7 +63,7 @@ XPMessageBox >> newContentMorph [
 			vResizing: #spaceFill)
 ]
 
-{ #category : #building }
+{ #category : 'building' }
 XPMessageBox >> newTextMorph [
 	"Answer a new text editor morph."
 
@@ -78,7 +80,7 @@ XPMessageBox >> newTextMorph [
 	^tm
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 XPMessageBox >> text: aStringOrText [
 	"Set the text."
 	

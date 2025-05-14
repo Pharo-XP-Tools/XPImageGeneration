@@ -1,10 +1,12 @@
 Class {
-	#name : #XPImageGeneration,
-	#superclass : #Object,
-	#category : #'XPImageGeneration-Core'
+	#name : 'XPImageGeneration',
+	#superclass : 'Object',
+	#category : 'XPImageGeneration-Core',
+	#package : 'XPImageGeneration',
+	#tag : 'Core'
 }
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> activateObjectCentricDebugging [
 	<script>
 	EpMonitor disableDuring: [ 
@@ -45,7 +47,7 @@ XPImageGeneration class >> activateObjectCentricDebugging [
 		
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> deactivateObjectCentricDebugging [
 <script>
 EpMonitor disableDuring: [ 
@@ -86,7 +88,7 @@ EpMonitor disableDuring: [
 		
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> fixRichTextComposerErrorForClassNamed: className [
 
 	| methodSource theClass |
@@ -99,29 +101,30 @@ XPImageGeneration class >> fixRichTextComposerErrorForClassNamed: className [
 	theClass compile: methodSource
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> fixRichTextComposerErrors [
 
 	self fixRichTextComposerErrorForClassNamed: #ClyRichTextClassCommentEditorToolMorph.
 	self fixRichTextComposerErrorForClassNamed: #ClyPackageRichTextCommentEditorToolMorph.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> generateImage [
 	Author fullName: 'ExperimentFramework'.
 	EpMonitor disableDuring: [ 
 		self loadBaselines.
 		self loadExperimentsPackage.
-		self install ]
+		self flag: 'Installation disabled for template'.
+		"self install" ]
 ]
 
-{ #category : #utils }
+{ #category : 'utils' }
 XPImageGeneration class >> getClassNamed: aString [
 
 	^ self environment at: aString
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> install [
 
 	"Executed after the baseline. Fixes some bugs"
@@ -131,7 +134,7 @@ XPImageGeneration class >> install [
 	PhexTaskLauncherPresenter open loadExperience: ObjectCentricDebuggingExperiment
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> loadBaselines [
 
 	"Silent-ish loading"
@@ -145,7 +148,7 @@ XPImageGeneration class >> loadBaselines [
 		load
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 XPImageGeneration class >> loadExperimentsPackage [
 
 	"Loads the unloaded package Experiments"

@@ -2,12 +2,14 @@
 Logging entry point for PhexExperiments 
 "
 Class {
-	#name : #ExperimentLogging,
-	#superclass : #Object,
-	#category : #'XPImageGeneration-Logging'
+	#name : 'ExperimentLogging',
+	#superclass : 'Object',
+	#category : 'XPImageGeneration-Logging',
+	#package : 'XPImageGeneration',
+	#tag : 'Logging'
 }
 
-{ #category : #logger }
+{ #category : 'logger' }
 ExperimentLogging class >> setLoggerFor: anExperiment [
 
 	"Sets the logger object for the experiment, and the  action handlers"
